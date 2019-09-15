@@ -7,7 +7,8 @@ import {
   Input,
   ElementRef,
   HostBinding,
-  OnDestroy
+  OnDestroy,
+  ViewEncapsulation
 } from '@angular/core';
 
 import {NG_VALIDATORS, NgControl} from '@angular/forms';

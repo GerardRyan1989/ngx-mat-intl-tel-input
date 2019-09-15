@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { NgxMatIntlTelInputComponent } from './ngx-mat-intl-tel-input.component';
-import {MatButtonModule, MatInputModule, MatMenuModule, MatDividerModule} from '@angular/material';
+import {MatButtonModule, MatInputModule, MatMenuModule, MatDividerModule, MatSelectModule} from '@angular/material';
 import { SearchPipe } from './search.pipe';
 
 @NgModule({
@@ -17,7 +17,8 @@ import { SearchPipe } from './search.pipe';
     MatMenuModule,
     MatButtonModule,
     MatDividerModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSelectModule
   ],
   exports: [NgxMatIntlTelInputComponent]
 })

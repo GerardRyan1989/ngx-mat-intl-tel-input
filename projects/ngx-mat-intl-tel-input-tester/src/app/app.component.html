@@ -2,28 +2,18 @@
   <h3>Test International Telephone Input Form</h3>
   <br>
   <form #f="ngForm" [formGroup]="phoneForm" (ngSubmit)="onSubmit()">
-    <mat-form-field style="width:50%">
+    <mat-form-field appearance="outline" style="width:50%">
       <ngx-mat-intl-tel-input
         [cssClass]="'custom'"
-        [preferredCountries]="['us', 'ca']"
+        [preferredCountries]="['ie', 'gb']"
         [enableAutoCountrySelect]="true"
         [enablePlaceholder]="true"
         placeholder="Enter Number"
         name="phone"
         formControlName="phone" #phone></ngx-mat-intl-tel-input>
       <mat-hint>e.g. {{phone.selectedCountry.placeHolder}}</mat-hint>
-      <mat-error *ngIf="f.form.controls['phone']?.errors?.required">Required Field</mat-error>
-      <mat-error *ngIf="f.submitted && f.form.controls['phone']?.errors?.validatePhoneNumber">Invalid Number</mat-error>
     </mat-form-field>
 
-    <mat-form-field>
-      <input name="name" matInput placeholder="Name" formControlName="name"/>
-    </mat-form-field>
-    <mat-form-field>
-      <input name="surname" matInput placeholder="surname" formControlName="surname"/>
-    </mat-form-field>
-
-    <button mat-button>Submit</button>
   </form>
   <br>
   <div><strong>Is input valid:</strong>

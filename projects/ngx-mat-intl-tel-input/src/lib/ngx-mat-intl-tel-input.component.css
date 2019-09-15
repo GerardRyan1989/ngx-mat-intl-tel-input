@@ -15,6 +15,7 @@ input:not(.country-search) {
   margin-top: 0 !important;
   margin-bottom: 0 !important;
   margin-right: 0;
+  margin-left: 20px;
 }
 
 input.country-search {
@@ -25,6 +26,7 @@ input.country-search {
   border-bottom: 1px solid #ddd;
   font-size: 14px;
   padding-bottom: 24px;
+  margin-right: 20px;
 }
 
 .icon-wrapper {
@@ -55,14 +57,12 @@ input.country-search {
   height: initial;
   line-height: unset;
   padding: 0 20px 0 0;
-  width: 90px;
-  opacity: 0;
-  transition: opacity 200ms;
+  width: 100px;
   position: absolute;
   top: 0;
-  bottom: 0;
+  bottom: 6px;
   padding: 1px;
-  right: auto;
+  right: 10px;
   left: 0;
   font-size: inherit;
   font-weight: inherit;
@@ -91,6 +91,16 @@ input.country-search {
   text-transform: none;
   width: 100%;
 }
+
+.country-selector-code{
+  margin-right: 10px;
+}
+
+::ng-deep .mat-menu-item {
+  padding: 0 10px!important;
+  width: 700px!important;
+}
+
 
 .flag.KY {
   background-position: 0 0
