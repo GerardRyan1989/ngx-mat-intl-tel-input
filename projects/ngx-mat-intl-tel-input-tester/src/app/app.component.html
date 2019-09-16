@@ -2,17 +2,7 @@
   <h3>Test International Telephone Input Form</h3>
   <br>
   <form #f="ngForm" [formGroup]="phoneForm" (ngSubmit)="onSubmit()">
-    <mat-form-field appearance="outline" style="width:50%">
-      <ngx-mat-intl-tel-input
-        [cssClass]="'custom'"
-        [preferredCountries]="['ie', 'gb']"
-        [enableAutoCountrySelect]="true"
-        [enablePlaceholder]="true"
-        placeholder="Enter Number"
-        name="phone"
-        formControlName="phone" #phone></ngx-mat-intl-tel-input>
-      <mat-hint>e.g. {{phone.selectedCountry.placeHolder}}</mat-hint>
-    </mat-form-field>
+   
 
   </form>
   <br>
@@ -32,3 +22,16 @@
     <pre>{{ f.form.controls['phone'].errors | json }}</pre>
   </div>
 </div>
+
+
+<mat-form-field appearance="outline" style="width:50%">
+  <ngx-mat-intl-tel-input
+    [cssClass]="'custom'"
+    [preferredCountries]="['ie', 'gb']"
+    [enableAutoCountrySelect]="true"
+    [enablePlaceholder]="true"
+    [enableSearch]="true"
+    name="phone"
+    formControlName="phone" #phone></ngx-mat-intl-tel-input>
+  <mat-hint>e.g. {{phone.selectedCountry.placeHolder}}</mat-hint>
+</mat-form-field>
